@@ -1,0 +1,65 @@
+swiper{
+  height:400rpx;
+}
+swiper image{
+  width:100%;
+  height:100%
+}
+
+.item{
+  background-color: #F4F0E6;
+  display: flex;
+  flex-direction:column;
+  padding: 10rpx 15rpx;
+}
+.music {
+  background-color: #ebe0dd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.title{
+  display: flex;
+  flex-direction:column;
+}
+.title image{
+  width: 110rpx;
+  height: 110rpx;
+}
+.theicon {
+  width: 70rpx;
+  height: 70rpx;
+  padding-left: 5rpx;
+}
+.music slider {
+  width: 450rpx;
+}
+.music .time {
+  padding-right: 8rpx;
+  width: 50rpx;
+  font-size: small;
+  color: #93c4db;
+}
+.name{
+  font-size: 15px;
+  font-style:normal;
+  color: #f8acac;
+  padding-top: 5rpx;
+}
+.header {
+  width:440rpx;
+  position: relative;
+  height: 70rpx;
+}
+
+.gif {
+  position: absolute;
+  left: 0;
+  bottom: 10rpx;
+  width: 100%;
+  mix-blend-mode: screen;
+  height: 70rpx;
+  border-radius: 18rpx;
+}

@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<!--幻灯片滚动-->
+<swiper indicator-dots="true" autoplay="true" interval="5000" duration="500">
+  <block wx:for="{{swiperImg}}" wx:key='swiper{{index}}'>
+    <swiper-item>
+      <image src="{{item.src}}" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!--音乐列表-->
+  <view id='audio-list'>
+  <view class='list-item' wx:for="{{musicList}}" wx:for-item="music" wx:key="{{music.id}}">
+  <view class="item">
+   <view class="music">
+    <view class='title'>
+       <image src='{{music.image}}'></image>
+    </view>
+
+  <!-- 播放按钮 -->
+  <image class='theicon' wx:if='{{!music.isPlay}}'src="/image/play.png" data-id="{{music.id}}"  bindtap="audioPlay"> </image>
+  <!-- 停止按钮 -->
+  <image class='theicon' wx:else src="/image/pause.png" data-id="{{music.id}}"  bindtap="audioPause"></image>
+
+
+  <slider wx:if='{{!music.isPlay}}' step="1"  backgroundColor="#efefef"  />
+  <view class="header" wx:else>
+  <image class="gif"  src="https://codermoyv.gitee.io/coder-moyv/assets/images/wechat/bg_wave.gif"></image>
+   </view>
+
+  <view class="time">{{music.time}}</view>
+</view>
+<text class="name">{{music.name}}</text>
+</view>
+</view>
+</view>
